@@ -1,5 +1,5 @@
 # Deploying Mediawiki app into kubernetes( i deployed over minikube)
-This is a deployment of Mediawiki into it using docker and kubernetes. 
+This is a deployment of Mediawiki app using docker and kubernetes. 
 
 
 ### Prerequisites
@@ -12,22 +12,19 @@ This is a deployment of Mediawiki into it using docker and kubernetes.
 1. Clone the current repo to your local machine using 
 
 ```
-git clone https://github.com/Anurag-30/MediaWiki.git
+git clone https://github.com/kaul-abhi/mediawikia.git
 
 ```
-2. Move into Terraform directory
+2. Move into Mediawikiapp folder
 
 ```
-cd MediaWiki/Terraform/
+cd Mediawikiapp/kubernetes/
 
 ```
 
-3. Run the Terraform script
+3. Run the kubectl command to deploy application, MariaDB. Running the command will create two replicas of app and 1 for mariadb.
+   I have exposed the application over nodeport 30163.
 
 ```
-terraform apply
 
-```
-Need to specify the region at the run time eg:us-east-1.
-
-You can access the application at http://{publicip}:30163/wiki
+You can access the application at http://{publicip}:30163/wiki or at http://localhost:30163/wiki
