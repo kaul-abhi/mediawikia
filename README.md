@@ -24,6 +24,9 @@ cd Mediawikiapp/kubernetes/
 
 3. Run the kubectl command to deploy application, MariaDB. Running the command will create two replicas of app and 1 for mariadb.
    I have exposed the application over nodeport 30163.
+   
+4. Docker Image is pushed over dockerhub. You can pull it by using command docker push docker12345abhishekkaul/wikimediaapp:v1
+   URL for dockerhub: https://hub.docker.com/repository/docker/docker12345abhishekkaul/wikimediaapp
 
 ```
 
